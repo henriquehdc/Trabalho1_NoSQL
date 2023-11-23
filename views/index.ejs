@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #400bf0;
+        }
+    </style>
+    <script>
+
+        function proximo() {
+            window.location.href = "/proximo";
+        }
+
+        function retirarSenha() {
+            window.location.href = "/retirar";
+        }
+
+    </script>
+
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+
+    <div style="display: flex; flex-direction: column; height: 300px; margin: auto;">
+
+        <div style="flex: 10;font-size: 50px;width: 200px; text-align: center; margin: auto;">
+            <p>ÚLTIMA SENHA:</p>
+            <%= senha%>
+        </div>
+
+        <div style="flex: 1; padding: 10px;">
+            Fila de senhas: <%= (fila==null ? "" : fila) %>
+        </div>
+
+        <div style="border: solid 1px; flex: 1;">
+            <div style="display: flex; background-color: darkgrey; padding: 10px;">
+
+                <div style="flex: 1; text-align: center;">
+                    Atendente
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    Cliente
+                </div>
+
+            </div>
+        </div>
+
+        <div style="flex: 1;">
+            <div style="display: flex; width: 100%;padding: 10px;">
+
+                <div style="flex: 1; text-align: center;">
+                    <button style="padding-top: 5px;padding-bottom: 5px;" onclick="proximo()">
+                        Chamar senha
+                    </button>
+                </div>
+                <div style="flex: 1;text-align: center;">
+                    <button style="padding-top: 5px;padding-bottom: 5px;" onclick="retirarSenha()">
+                        Retirar Senha
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
